@@ -24,12 +24,13 @@ void TipoContacto::init(Caracter nombre[], Entero numero){
 typedef TipoContacto TipoContactos[LongitudContactos];
 
 typedef struct TipoAgenda{
-    TipoContactos contactos;
-    Entero numeroContactos;
-
     void init();
     void insertar(TipoContacto contacto);
     void listar();
+    
+    private:
+    TipoContactos contactos;
+    Entero numeroContactos;
 };
 
 void TipoAgenda::init(){
